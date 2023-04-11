@@ -6,19 +6,22 @@ const Pokemon = ({pokemon,setUserPokemon,setPage}) => {
         "https://pokeapi.co/api/v2/pokemon/charizard",
         "https://pokeapi.co/api/v2/pokemon/poliwhirl"
     ]
-    const [usersPokemons, setUsersPokemons]=useState([])
+
+    const [usersPokemons, setUsersPokemons]=useState([]);
+
     useEffect(() => {
         const promises = usersPokemon.map(url => fetch(url));
 
         Promise.all(promises)
             .then(responses => Promise.all(responses.map(response => response.json())))
             .then(pokemonData => setUsersPokemons(pokemonData))
-      }, [])
-  function handleOnclick (i)
-  {
+      }, []);
+
+  function handleOnclick (i) {
     setUserPokemon(usersPokemons[i])
     setPage('battle')
   }
+  
     return (
     <div>
       <h1>{pokemon.name}</h1>

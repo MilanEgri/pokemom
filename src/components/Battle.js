@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
 const Battle = ({ pokemon, userPokemon, setPage }) => {
-  const [enemyHP, setEnemyHP] = useState(pokemon.stats[0].base_stat)
-  const [userHP, setUserHP] = useState(userPokemon.stats[0].base_stat)
-  const [isBattleStarted, setIsBattleStarted] = useState(false)
-  const [buttonMode, setButtonMode] = useState('loaded')
+  const [enemyHP, setEnemyHP] = useState(pokemon.stats[0].base_stat);
+  const [userHP, setUserHP] = useState(userPokemon.stats[0].base_stat);
+  const [isBattleStarted, setIsBattleStarted] = useState(false);
+  const [buttonMode, setButtonMode] = useState('loaded');
+
   useEffect(() => {
     if (isBattleStarted && enemyHP > 0 && userHP > 0) {
-
       setTimeout(() => {
         let myDamage = ((((2 / 5 + 2) * userPokemon.stats[1].base_stat * 60 / pokemon.stats[2].base_stat) / 50) + 2) * (Math.floor(Math.random() * 39) + 217) / 255
         let enemyDamage = ((((2 / 5 + 2) * pokemon.stats[1].base_stat * 60 / userPokemon.stats[2].base_stat) / 50) + 2) * (Math.floor(Math.random() * 39) + 217) / 255
@@ -16,18 +16,19 @@ const Battle = ({ pokemon, userPokemon, setPage }) => {
         if (userHP < enemyDamage) {
           setButtonMode('lose')
         }
-        if(enemyHP<myDamage)
-        {
+        if (enemyHP < myDamage) {
           setButtonMode('win')
         }
       }, 100);
 
     }
-  }, [isBattleStarted, userHP, enemyHP])
+  }, [isBattleStarted, userHP, enemyHP]);
+
   function handleClick() {
     setIsBattleStarted(true)
     setButtonMode('battle')
-  }
+  };
+
   return (
     <div>
       <h1>enenmy: {pokemon.name}</h1>
@@ -47,11 +48,12 @@ const Battle = ({ pokemon, userPokemon, setPage }) => {
           <div>
             <button onClick={() => setPage('start')}>Back</button>
           </div>
-          : buttonMode ==='win'?<div>
+          : buttonMode === 'win' ?
+            <div>
               <button>Catch</button>
-            <button onClick={() => setPage('start')}>Back</button>
-          </div>
-          : null
+              <button onClick={() => setPage('start')}>Back</button>
+            </div>
+            : null
       }
     </div>
   )
