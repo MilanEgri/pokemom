@@ -19,8 +19,6 @@ const Start = ({setPokemon,setPage}) => {
     const response = await fetch(url);
     const json = await response.json();
     const randomPokemon = json;
-    //setActivePokemon(randomPokemon)
-    console.log(randomPokemon);
     setPokemon(randomPokemon)
     setPage('pokemon')
   }
