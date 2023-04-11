@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const Start = () => {
+const Start = ({setPokemon,setPage}) => {
 
   const [locations, setLocations] = useState(null);
   useEffect(() => {
@@ -21,6 +21,8 @@ const Start = () => {
     const randomPokemon = json;
     //setActivePokemon(randomPokemon)
     console.log(randomPokemon);
+    setPokemon(randomPokemon)
+    setPage('pokemon')
   }
 
   function onClickHandler(i) {
@@ -33,7 +35,7 @@ const Start = () => {
   return (
     <div>
       {locations && locations.results.map((location, index) => (
-        <button key={index} onClick={onClickHandler(index)}>{location.name}</button>
+        <button key={index} onClick={() => onClickHandler(index)}>{location.name}</button>
       ))}
     </div>
   )
