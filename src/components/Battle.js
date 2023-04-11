@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const Battle = ({ pokemon, userPokemon, setPage }) => {
+const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons }) => {
   const [enemyHP, setEnemyHP] = useState(pokemon.stats[0].base_stat);
   const [userHP, setUserHP] = useState(userPokemon.stats[0].base_stat);
   const [isBattleStarted, setIsBattleStarted] = useState(false);
@@ -28,6 +28,11 @@ const Battle = ({ pokemon, userPokemon, setPage }) => {
     setIsBattleStarted(true)
     setButtonMode('battle')
   };
+  function handleCacth() {
+    setUsersPokemons([...usersPokemons, pokemon])
+    alert('pokemon catched')
+    setButtonMode('lose')
+  }
 
   return (
     <div>
@@ -50,7 +55,7 @@ const Battle = ({ pokemon, userPokemon, setPage }) => {
           </div>
           : buttonMode === 'win' ?
             <div>
-              <button>Catch</button>
+              <button onClick={() =>handleCacth()}>Catch</button>
               <button onClick={() => setPage('start')}>Back</button>
             </div>
             : null

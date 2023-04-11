@@ -1,21 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
-const Pokemon = ({pokemon,setUserPokemon,setPage}) => {
-    const usersPokemon = [
-        "https://pokeapi.co/api/v2/pokemon/bulbasaur",
-        "https://pokeapi.co/api/v2/pokemon/charizard",
-        "https://pokeapi.co/api/v2/pokemon/poliwhirl"
-    ]
+const Pokemon = ({pokemon,setUserPokemon,setPage,usersPokemons}) => {
 
-    const [usersPokemons, setUsersPokemons]=useState([]);
-
-    useEffect(() => {
-        const promises = usersPokemon.map(url => fetch(url));
-
-        Promise.all(promises)
-            .then(responses => Promise.all(responses.map(response => response.json())))
-            .then(pokemonData => setUsersPokemons(pokemonData))
-      }, []);
 
   function handleOnclick (i) {
     setUserPokemon(usersPokemons[i])
