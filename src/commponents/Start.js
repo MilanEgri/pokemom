@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 const Start = () => {
 
-
-  const [locations, setLocations] = useState([]);
+  const [locations, setLocations] = useState(null);
 
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/location')
@@ -13,8 +12,8 @@ const Start = () => {
 
   return (
     <div>
-      {locations && locations.map(location => (
-        <h2>{location.name}</h2>
+      {locations && locations.results.map((location, index) => (
+        <h2 key={index}>{location.name}</h2>
       ))}
     </div>
   )
