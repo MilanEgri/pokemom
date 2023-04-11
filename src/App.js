@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
 import './App.css';
-import Start from './commponents/Start';
-import Pokemon from './commponents/Pokemon';
+import Start from './components/Start';
+import Pokemon from './components/Pokemon';
 
 function App() {
   const [page, setPage] = useState('start')
@@ -10,7 +10,9 @@ function App() {
   
   return (
     <div className="App">
-      {page ==='start'? < Start  setPokemon={setPokemon} pokemon={pokemon} setPage={setPage}/> : <Pokemon  pokemon={pokemon}/> }
+      {page ==='start'? 
+      < Start  setPokemon={setPokemon} pokemon={pokemon} setPage={setPage}/> 
+      : <Pokemon  pokemon={pokemon}/> }
     </div>
   );
 }

@@ -18,7 +18,7 @@ const Pokemon = ({pokemon}) => {
     return (
     <div>
       <h1>{pokemon.name}</h1>
-      <h3>{usersPokemons && usersPokemons.map((e,i) => <div key={i}>{e.name}</div>)}</h3>
+      <h3>{usersPokemons && usersPokemons.map((e,i) => <div key={i}>{e.name}</div>)}</h3>
     </div>
   )
 }
