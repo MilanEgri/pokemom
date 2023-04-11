@@ -15,7 +15,7 @@ function App() {
       {page ==='start'? 
       < Start  setPokemon={setPokemon} pokemon={pokemon} setPage={setPage}/> 
       : page ==='pokemon'?<Pokemon  pokemon={pokemon} setUserPokemon={setUserPokemon} setPage={setPage}/>
-      : <Battle pokemon={pokemon} userPokemon={userPokemon}/> }
+      : <Battle pokemon={pokemon} userPokemon={userPokemon} setPage={setPage} /> }
     </div>
   );
 }
