@@ -4,7 +4,7 @@ import './App.css';
 import Start from './commponents/Start';
 
 function App() {
-  const [page setPage] =useState('start')
+  const [page, setPage] = useState('start')
   
   return (
     <div className="App">
