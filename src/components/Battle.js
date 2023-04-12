@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import sound from './PokémonThemeSong.wav'
 
 const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons }) => {
   const [enemyHP, setEnemyHP] = useState(pokemon.stats[0].base_stat);
   const [userHP, setUserHP] = useState(userPokemon.stats[0].base_stat);
   const [isBattleStarted, setIsBattleStarted] = useState(false);
   const [buttonMode, setButtonMode] = useState('loaded');
+  const mySong = new Audio(sound);
 
   useEffect(() => {
     if (isBattleStarted && enemyHP > 0 && userHP > 0) {
@@ -25,13 +27,20 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   }, [isBattleStarted, userHP, enemyHP]);
 
   function handleClick() {
+    mySong.play()
     setIsBattleStarted(true)
     setButtonMode('battle')
   };
+
   function handleCacth() {
     setUsersPokemons([...usersPokemons, pokemon])
     alert('pokemon catched')
     setButtonMode('lose')
+  };
+
+  function handleBack() {
+    setPage('start')
+    mySong.pause()
   }
 
   return (
@@ -47,16 +56,16 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
       {buttonMode === 'loaded' ?
         <div>
           <button onClick={() => handleClick()}>Battle</button>
-          <button onClick={() => setPage('start')}>Back</button>
+          <button onClick={() => handleBack()}>Back</button>
         </div>
         : buttonMode === 'lose' ?
           <div>
-            <button onClick={() => setPage('start')}>Back</button>
+            <button onClick={() => handleBack()}>Back</button>
           </div>
           : buttonMode === 'win' ?
             <div>
               <button onClick={() =>handleCacth()}>Catch</button>
-              <button onClick={() => setPage('start')}>Back</button>
+              <button onClick={() => handleBack()}>Back</button>
             </div>
             : null
       }
