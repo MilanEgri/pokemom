@@ -9,6 +9,13 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   const audioRef = useRef(null);
 
   useEffect(() => {
+     playSong()
+
+    return () => {
+      pauseSong()
+    }
+  }, []);
+  useEffect(() => {
     if (isBattleStarted && enemyHP > 0 && userHP > 0) {
       setTimeout(() => {
         let myDamage = ((((2 / 5 + 2) * userPokemon.stats[1].base_stat * 60 / pokemon.stats[2].base_stat) / 50) + 2) * (Math.floor(Math.random() * 39) + 217) / 255
@@ -40,7 +47,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   }
 
   function handleClick() {
-    playSong()
+    
     setIsBattleStarted(true)
     setButtonMode('battle')
   };
@@ -53,7 +60,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
 
   function handleBack() {
     setPage('start')
-    pauseSong()
+    
   }
 
   return (
