@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import {AiFillHeart} from 'react-icons/ai'
+import { AiFillHeart } from 'react-icons/ai'
 
 const Pokemon = ({ pokemon, setUserPokemon, setPage, usersPokemons }) => {
 
@@ -19,7 +19,7 @@ const Pokemon = ({ pokemon, setUserPokemon, setPage, usersPokemons }) => {
         <div className={`pokemonContent`}>
           <h1 className='pokemonName'>{pokemon.name}</h1>
           <p className='pokemonType'>{pokemon["types"][0]["type"]["name"]}</p>
-          <p className='pokemonHP'>{pokemon.stats[0].base_stat} <AiFillHeart/></p>
+          <p className='pokemonHP'>{pokemon.stats[0].base_stat} <AiFillHeart /></p>
           <p className='pokemonATK'>{pokemon.stats[1].base_stat}</p>
           <p className='pokemonDEF'>{pokemon.stats[2].base_stat}</p>
         </div>
@@ -28,7 +28,14 @@ const Pokemon = ({ pokemon, setUserPokemon, setPage, usersPokemons }) => {
 
 
 
-      <div className='user' >{usersPokemons && usersPokemons.map((e, i) => <button onClick={() => handleOnclick(i)} key={i}>{e.name}</button>)}</div>
+      <div className='user' >{usersPokemons && usersPokemons.map((e, i) => <button onClick={() => handleOnclick(i)} key={i} className={`smallPokemonCardContanier${e["types"][0]["type"]["name"]}`} >
+        <div className='smallPokemonCard'>
+          <div className={`smallPokemonBackground`}>
+            <img src={e.sprites.front_default} className='smallPokemonImage' />
+          </div>
+        </div>
+      </button>)}
+      </div>
     </div>
   )
 }

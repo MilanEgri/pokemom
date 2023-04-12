@@ -3,7 +3,8 @@
     align-items: center;
     flex-direction: column;
 }
-.Start__ChoseLocationText{
+
+.Start__ChoseLocationText {
     color: #50514F;
     display: flex;
     align-items: center;
@@ -11,6 +12,7 @@
     justify-content: center;
     text-align: center;
 }
+
 .Start__Button__Conatnier {
     display: flex;
     align-items: center;
@@ -39,228 +41,254 @@
     scale: 1.05;
 }
 
-.user{
+.user {
     margin-top: 20vh;
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    width: 100vw;
 }
-.pokemonCardContanierwater{
+
+.pokemonCardContanierwater {
     background: linear-gradient(120deg, #1CB5E0 0%, #000851 100%);
     box-shadow: 0px 5px 20px -10px #000851;
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierfairy{
+
+.pokemonCardContanierfairy {
     background: linear-gradient(45deg, #ffe6f0 0%, #ffc5e0 34%, #ffa6b9 71%, #ff8a95 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContaniernormal{
+
+.pokemonCardContaniernormal {
     background: linear-gradient(110deg, #FDBB2D 0%, #3A1C71 100%);
     box-shadow: 0px 5px 20px -10px #3A1C71;
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierelectric{
+
+.pokemonCardContanierelectric {
     background: linear-gradient(90deg, #ffde00 34%, #e8ff99 83%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierfire{
+
+.pokemonCardContanierfire {
     background: linear-gradient(0deg, #c71800 10%, #fcc245 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierpsychic{
+
+.pokemonCardContanierpsychic {
     background: linear-gradient(140deg, #ffa7f9 0%, #ff2cc3 39%, #ffe3a7 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierdark{
+
+.pokemonCardContanierdark {
     background: linear-gradient(20deg, #191919 0%, #100b32 33%, #5c0249 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContaniergrass{
+
+.pokemonCardContaniergrass {
     background: linear-gradient(140deg, #c4da3d 0%, #6e7f0e 69%, #275009 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierice{
+
+.pokemonCardContanierice {
     background: linear-gradient(230deg, #caeaf6 0%, #a0eaf1 46%, #6fb8eb 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierfighting{
+
+.pokemonCardContanierfighting {
     background: linear-gradient(0deg, #ED6238 10%, #996238 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierbug{
+
+.pokemonCardContanierbug {
     background: linear-gradient(0deg, #459A50 10%, #1F4C27 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierghost{
+
+.pokemonCardContanierghost {
     background: linear-gradient(0deg, #8A6289 10%, #34336B 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierflying{
+
+.pokemonCardContanierflying {
     background: linear-gradient(0deg, #93B2C7 10%, #4A687E 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierground{
+
+.pokemonCardContanierground {
     background: linear-gradient(0deg, #6E491F 10%, #AA712C 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierpoison{
+
+.pokemonCardContanierpoison {
     background: linear-gradient(0deg, #9B6AD9 10%, #5D2D80 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierrock{
+
+.pokemonCardContanierrock {
     background: linear-gradient(0deg, #8B3E21 10%, #48180B 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContaniersteel{
+
+.pokemonCardContaniersteel {
     background: linear-gradient(0deg, #55C095 10%, #5F756D 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonCardContanierdragon{
+
+.pokemonCardContanierdragon {
     background: linear-gradient(0deg, #5CCBD9 10%, #448B95 100%);
     width: 350px;
     height: 400px;
     position: relative;
-    top:5vh;
+    top: 5vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
 }
-.pokemonImage{
+
+.pokemonImage {
     height: 200px;
     width: 200px;
     image-rendering: pixelated;
 }
-.pokemonBackground{
+
+.pokemonBackground {
     text-align: center;
-    background-color:  rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.pokemonName{
+
+.pokemonName {
     text-align: center;
     font-size: 39px;
     font-weight: lighter;
     margin-block-start: 0;
     padding-top: 10px;
 }
-.pokemonType{
+
+.pokemonType {
     background-color: black;
     padding: 5px;
     color: white;
@@ -268,9 +296,10 @@
     width: 100px;
     text-align: center;
     position: absolute;
-    top:44%
+    top: 44%
 }
-.pokemonATK{
+
+.pokemonATK {
     position: absolute;
     left: 25px;
     bottom: 10px;
@@ -285,7 +314,8 @@
     color: red;
     font-weight: bolder;
 }
-.pokemonDEF{
+
+.pokemonDEF {
     position: absolute;
     right: 25px;
     bottom: 10px;
@@ -300,7 +330,8 @@
     color: green;
     font-weight: bolder;
 }
-.pokemonHP{
+
+.pokemonHP {
     position: absolute;
     right: 10px;
     top: -15px;
@@ -315,9 +346,210 @@
     font-size: 24px;
     border-top-right-radius: 10px;
 }
-.pokemonContent{
-    background-color: rgba(255, 255, 255, 0.65);    
+
+.pokemonContent {
+    background-color: rgba(255, 255, 255, 0.65);
     height: 196px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+
+
+
+.smallPokemonCardContanierwater {
+    background: linear-gradient(120deg, #1CB5E0 0%, #000851 100%);
+    box-shadow: 0px 5px 20px -10px #000851;
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierfairy {
+    background: linear-gradient(45deg, #ffe6f0 0%, #ffc5e0 34%, #ffa6b9 71%, #ff8a95 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContaniernormal {
+    background: linear-gradient(110deg, #FDBB2D 0%, #3A1C71 100%);
+    box-shadow: 0px 5px 20px -10px #3A1C71;
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallpokemonCardContanierelectric {
+    background: linear-gradient(90deg, #ffde00 34%, #e8ff99 83%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierfire {
+    background: linear-gradient(0deg, #c71800 10%, #fcc245 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierpsychic {
+    background: linear-gradient(140deg, #ffa7f9 0%, #ff2cc3 39%, #ffe3a7 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierdark {
+    background: linear-gradient(20deg, #191919 0%, #100b32 33%, #5c0249 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContaniergrass {
+    background: linear-gradient(140deg, #c4da3d 0%, #6e7f0e 69%, #275009 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierice {
+    background: linear-gradient(230deg, #caeaf6 0%, #a0eaf1 46%, #6fb8eb 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierfighting {
+    background: linear-gradient(0deg, #ED6238 10%, #996238 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierbug {
+    background: linear-gradient(0deg, #459A50 10%, #1F4C27 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierghost {
+    background: linear-gradient(0deg, #8A6289 10%, #34336B 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierflying {
+    background: linear-gradient(0deg, #93B2C7 10%, #4A687E 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierground {
+    background: linear-gradient(0deg, #6E491F 10%, #AA712C 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierpoison {
+    background: linear-gradient(0deg, #9B6AD9 10%, #5D2D80 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierrock {
+    background: linear-gradient(0deg, #8B3E21 10%, #48180B 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContaniersteel {
+    background: linear-gradient(0deg, #55C095 10%, #5F756D 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.smallPokemonCardContanierdragon {
+    background: linear-gradient(0deg, #5CCBD9 10%, #448B95 100%);
+    width: 175px;
+    height: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.smallPokemonBackground{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    top: 10px;
+    width: 155px;
+}
+.smallPokemonImage {
+    height: 100px;
+    width: 100px;
+    image-rendering: pixelated;
 }
