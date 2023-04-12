@@ -99,9 +99,54 @@
     padding: 10px;
     border-radius: 10px;
 }
+.pokemonCardContanierpsychic{
+    background: linear-gradient(140deg, #ffa7f9 0%, #ff2cc3 39%, #ffe3a7 100%);
+    width: 350px;
+    height: 400px;
+    position: relative;
+    top:5vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+.pokemonCardContanierdark{
+    background: linear-gradient(20deg, #191919 0%, #100b32 33%, #5c0249 100%);
+    width: 350px;
+    height: 400px;
+    position: relative;
+    top:5vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+.pokemonCardContaniergrass{
+    background: linear-gradient(140deg, #c4da3d 0%, #6e7f0e 69%, #275009 100%);
+    width: 350px;
+    height: 400px;
+    position: relative;
+    top:5vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+.pokemonCardContanieice{
+    background: linear-gradient(230deg, #caeaf6 0%, #a0eaf1 46%, #6fb8eb 100%);
+    width: 350px;
+    height: 400px;
+    position: relative;
+    top:5vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
 .pokemonImage{
     height: 200px;
-    width: 200px
+    width: 200px;
+    image-rendering: pixelated;
 }
 .pokemonBackground{
     text-align: center;
