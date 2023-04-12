@@ -15,10 +15,10 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
         let enemyDamage = ((((2 / 5 + 2) * pokemon.stats[1].base_stat * 60 / userPokemon.stats[2].base_stat) / 50) + 2) * (Math.floor(Math.random() * 39) + 217) / 255
         setEnemyHP(Math.floor(enemyHP - myDamage))
         setUserHP(Math.floor(userHP - enemyDamage))
-        if (userHP <= enemyDamage) {
+        if (Math.floor(userHP) <= Math.floor(enemyDamage)) {
           setButtonMode('lose')
         }
-        if (enemyHP <= myDamage) {
+        if (Math.floor(enemyHP) <= Math.floor(myDamage)) {
           setButtonMode('win')
         }
       }, 100);
