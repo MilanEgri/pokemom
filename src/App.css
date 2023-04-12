@@ -1,0 +1,40 @@
+.Start {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.Start__ChoseLocationText{
+    color: #50514F;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    justify-content: center;
+    text-align: center;
+}
+.Start__Button__Conatnier {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    width: 42vw;
+}
+
+.Start__Button {
+    background: linear-gradient(to bottom, #EF594F 50%, #C1DAFF 50%);
+    color: #50514F;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 5px solid #50514F;
+    color: #50514f;
+    font-weight: 700;
+    font-size: 1.5em;
+    width: 20vw;
+    height: 11vh;
+    text-align: center;
+}
+
+.Start__Button:hover {
+    scale: 1.05;
+}
