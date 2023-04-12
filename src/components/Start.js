@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import '../App.css'
+import { MdCatchingPokemon } from 'react-icons/md'
 
 const Start = ({setPokemon,setPage}) => {
 
@@ -29,10 +31,13 @@ const Start = ({setPokemon,setPage}) => {
   }
 
   return (
-    <div>
+    <div className='Start'>
+      <h1 className='Start__ChoseLocationText'>   <span style={{ color: '#EF594F' }}><MdCatchingPokemon /></span> Chose location <span style={{ color: '#EF594F' }}><MdCatchingPokemon /></span> </h1>
+    <div className='Start__Button__Conatnier'>
       {locations && locations.results.map((location, index) => (
-        <button key={index} onClick={() => onClickHandler(index)}>{location.name}</button>
+        <button className='Start__Button' key={index} onClick={() => onClickHandler(index)}>{location.name}</button>
       ))}
+    </div>
     </div>
   )
 }
