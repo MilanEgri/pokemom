@@ -65,6 +65,40 @@
     padding: 10px;
     border-radius: 10px;
 }
+.pokemonCardContaniernormal{
+    background: linear-gradient(110deg, #FDBB2D 0%, #3A1C71 100%);
+    box-shadow: 0px 5px 20px -10px #3A1C71;
+    width: 350px;
+    height: 400px;
+    position: relative;
+    top:5vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+.pokemonCardContanierelectric{
+    background: linear-gradient(90deg, #ffde00 34%, #e8ff99 83%);
+    width: 350px;
+    height: 400px;
+    position: relative;
+    top:5vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
+.pokemonCardContanierfire{
+    background: linear-gradient(0deg, #c71800 10%, #fcc245 100%);
+    width: 350px;
+    height: 400px;
+    position: relative;
+    top:5vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+}
 .pokemonImage{
     height: 200px;
     width: 200px;
