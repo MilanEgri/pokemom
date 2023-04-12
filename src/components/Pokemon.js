@@ -11,12 +11,12 @@ const Pokemon = ({ pokemon, setUserPokemon, setPage, usersPokemons }) => {
   }
 
   return (
-    <div className='pokemonCardContanier'>
+    <div className={`pokemonCardContanier${pokemon["types"][0]["type"]["name"]}`}>
       <div className='pokemonCard'>
-        <div className='pokemonBackground'>
+        <div className={`pokemonBackground`}>
           <img src={pokemon.sprites.front_default} className='pokemonImage' />
         </div>
-        <div className='pokemonContent'>
+        <div className={`pokemonContent`}>
           <h1 className='pokemonName'>{pokemon.name}</h1>
           <p className='pokemonType'>{pokemon["types"][0]["type"]["name"]}</p>
           <p className='pokemonHP'>{pokemon.stats[0].base_stat} <AiFillHeart/></p>
