@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import {AiFillHeart} from 'react-icons/ai'
 
 const Pokemon = ({ pokemon, setUserPokemon, setPage, usersPokemons }) => {
 
@@ -13,23 +14,21 @@ const Pokemon = ({ pokemon, setUserPokemon, setPage, usersPokemons }) => {
     <div className='pokemonCardContanier'>
       <div className='pokemonCard'>
         <div className='pokemonBackground'>
-          <img src={pokemon.sprites.front_default} className='image' />
+          <img src={pokemon.sprites.front_default} className='pokemonImage' />
         </div>
         <div className='pokemonContent'>
           <h1 className='pokemonName'>{pokemon.name}</h1>
-          <h2 className='pokemonType'>{pokemon["types"][0]["type"]["name"]}</h2>
-        </div>
-        <div className='pokemonStats'>
-          <h3 className='pokemonHP'>HP: {pokemon.stats[0].base_stat}</h3>
-          <h3 className='pokemonATK'>ATK: {pokemon.stats[1].base_stat}</h3>
-          <h3 className='pokemonDEF'>DEF: {pokemon.stats[2].base_stat}</h3>
+          <p className='pokemonType'>{pokemon["types"][0]["type"]["name"]}</p>
+          <p className='pokemonHP'>{pokemon.stats[0].base_stat} <AiFillHeart/></p>
+          <p className='pokemonATK'>{pokemon.stats[1].base_stat}</p>
+          <p className='pokemonDEF'>{pokemon.stats[2].base_stat}</p>
         </div>
       </div>
 
 
 
 
-      <div >{usersPokemons && usersPokemons.map((e, i) => <button onClick={() => handleOnclick(i)} key={i}>{e.name}</button>)}</div>
+      <div className='user' >{usersPokemons && usersPokemons.map((e, i) => <button onClick={() => handleOnclick(i)} key={i}>{e.name}</button>)}</div>
     </div>
   )
 }
