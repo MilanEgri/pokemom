@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import sound from './PokémonThemeSong.wav'
 
 const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons }) => {
@@ -6,7 +6,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   const [userHP, setUserHP] = useState(userPokemon.stats[0].base_stat);
   const [isBattleStarted, setIsBattleStarted] = useState(false);
   const [buttonMode, setButtonMode] = useState('loaded');
-  const mySong = new Audio(sound);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     if (isBattleStarted && enemyHP > 0 && userHP > 0) {
@@ -26,8 +26,19 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
     }
   }, [isBattleStarted, userHP, enemyHP]);
 
+  function playSong() {
+    audioRef.current = new Audio(sound);
+    audioRef.current.play();
+  }
+
+  function pauseSong() {
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+  }
+
   function handleClick() {
-    mySong.play()
+    playSong()
     setIsBattleStarted(true)
     setButtonMode('battle')
   };
@@ -40,7 +51,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
 
   function handleBack() {
     setPage('start')
-    mySong.pause()
+    pauseSong()
   }
 
   return (
