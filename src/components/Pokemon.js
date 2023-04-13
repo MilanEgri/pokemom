@@ -33,6 +33,13 @@ const Pokemon = ({ pokemon, setUserPokemon, setPage, usersPokemons }) => {
           <div className={`smallPokemonBackground`}>
             <img src={e.sprites.front_default} className='smallPokemonImage' />
           </div>
+          <div className={`smallPokemonContent`}>
+            <h1 className='smallPokemonName'>{e.name}</h1>
+            <p className='smallPokemonType'>{e["types"][0]["type"]["name"]}</p>
+            <p className='smallPokemonHP'>{e.stats[0].base_stat} <AiFillHeart /></p>
+            <p className='smallPokemonATK'>{e.stats[1].base_stat}</p>
+            <p className='smallPokemonDEF'>{e.stats[2].base_stat}</p>
+          </div>
         </div>
       </button>)}
       </div>
