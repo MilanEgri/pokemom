@@ -61,9 +61,9 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
     const pokebutton = document.createElement('div');
     pokebutton.classList.add('alert_button');
     alertBox.appendChild(pokebutton);
-    /* setTimeout(() => {
+    setTimeout(() => {
       alertBox.remove();
-    }, 4000); */
+    }, 3000);
     setButtonMode('lose')
   };
 
