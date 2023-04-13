@@ -8,3 +8,10 @@ button{
   box-shadow: none;
   scroll-behavior: smooth;
 }
+.battleBox{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import sound from './PokémonThemeSong.wav'
+import { AiFillHeart } from 'react-icons/ai'
 
 const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons }) => {
   const [enemyHP, setEnemyHP] = useState(pokemon.stats[0].base_stat);
@@ -63,7 +64,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
     alertBox.appendChild(pokebutton);
     setTimeout(() => {
       alertBox.remove();
-    }, 3000);
+    }, 1500);
     setButtonMode('lose')
   };
 
@@ -73,15 +74,43 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   }
 
   return (
-    <div>
-      <h1>enenmy: {pokemon.name}</h1>
-      <h3>hp: {enemyHP}</h3>
-      <h3>atk: {pokemon.stats[1].base_stat}</h3>
-      <h3>def: {pokemon.stats[2].base_stat}</h3>
-      <h1>user: {userPokemon.name}</h1>
-      <h3>hp: {userHP}</h3>
-      <h3>atk: {userPokemon.stats[1].base_stat}</h3>
-      <h3>def: {userPokemon.stats[2].base_stat}</h3>
+
+
+
+    <div className='battle'>
+      <h1 className='enemy'>Battle</h1>
+      <div className='battleBox'>
+        <div className={`pokemonCardContanier${pokemon["types"][0]["type"]["name"]}`}>
+          <div className='pokemonCard'>
+            <div className={`pokemonBackground`}>
+              <img src={pokemon.sprites.front_default} className='pokemonImage' />
+            </div>
+            <div className={`pokemonContent`}>
+              <h1 className='pokemonName'>{pokemon.name}</h1>
+              <p className='pokemonType'>{pokemon["types"][0]["type"]["name"]}</p>
+              <p className='pokemonHP'>{enemyHP} <AiFillHeart /></p>
+              <p className='pokemonATK'>{pokemon.stats[1].base_stat}</p>
+              <p className='pokemonDEF'>{pokemon.stats[2].base_stat}</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div className={`pokemonCardContanier${userPokemon["types"][0]["type"]["name"]}`}>
+          <div className='pokemonCard'>
+            <div className={`pokemonBackground`}>
+              <img src={userPokemon.sprites.front_default} className='pokemonImage' />
+            </div>
+            <div className={`pokemonContent`}>
+              <h1 className='pokemonName'>{userPokemon.name}</h1>
+              <p className='pokemonType'>{userPokemon["types"][0]["type"]["name"]}</p>
+              <p className='pokemonHP'>{userHP} <AiFillHeart /></p>
+              <p className='pokemonATK'>{userPokemon.stats[1].base_stat}</p>
+              <p className='pokemonDEF'>{userPokemon.stats[2].base_stat}</p>
+            </div>
+          </div>
+        </div>
+      </div>
       {buttonMode === 'loaded' ?
         <div>
           <button onClick={() => handleClick()}>Battle</button>
