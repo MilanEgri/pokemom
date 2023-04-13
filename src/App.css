@@ -42,11 +42,11 @@
 }
 
 .user {
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: flex;
     gap: 1vw;
     flex-wrap: wrap;
-    width: 100vw;
+    justify-content: center;
 }
 
 .pokemonCardContanierwater {
@@ -55,7 +55,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -67,7 +67,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -80,7 +80,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -92,7 +92,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -104,7 +104,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -116,7 +116,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -128,7 +128,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -140,7 +140,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -152,7 +152,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -164,7 +164,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -176,7 +176,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -188,7 +188,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -200,7 +200,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -212,7 +212,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -224,7 +224,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -236,7 +236,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -248,7 +248,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -260,7 +260,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -366,6 +366,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierwater:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierfairy {
@@ -376,6 +383,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierfairy:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContaniernormal {
@@ -387,6 +401,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContaniernormal:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallpokemonCardContanierelectric {
@@ -397,6 +418,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallpokemonCardContanierelectric:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierfire {
@@ -407,6 +435,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierfire:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierpsychic {
@@ -417,6 +452,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierpsychic:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierdark {
@@ -427,6 +469,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierdark:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContaniergrass {
@@ -437,6 +486,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContaniergrass:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierice {
@@ -447,6 +503,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierice:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierfighting {
@@ -457,6 +520,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierfighting:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierbug {
@@ -467,6 +537,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierbug:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierghost {
@@ -477,6 +554,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierghost:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierflying {
@@ -487,6 +571,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierflying:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierground {
@@ -497,6 +588,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierground:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierpoison {
@@ -507,6 +605,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierpoison:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierrock {
@@ -517,6 +622,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierrock:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContaniersteel {
@@ -527,6 +639,13 @@
     transform: translateX(-50%);
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierstee:hover{
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonCardContanierdragon {
@@ -537,6 +656,13 @@
     transform: translateX(-50%);
     padding: 5px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.smallPokemonCardContanierdragon:hover {
+    rotate: 3deg;
+    scale: 1.02;
+    box-shadow: 1px 1px 30px #ffd700,
+                 1px 1px 50px #ffd700;
 }
 
 .smallPokemonBackground {
@@ -599,3 +725,90 @@
     box-shadow: 0 0 0 10px black;
   }
 
+.smallPokemonContent{
+    background-color: rgba(255, 255, 255, 0.65);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 103px;
+    height: 80px;
+}
+.smallPokemonName{
+    text-align: center;
+    font-size: 19px;
+    font-weight: lighter;
+    margin-block-start: 0;
+    padding-top: 10px;
+}
+.smallPokemonType{
+    background-color: black;
+    padding: 3px;
+    color: white;
+    border-radius: 3px;
+    width: 70px;
+    text-align: center;
+    position: absolute;
+    top: 44%
+}
+.smallPokemonHP{
+    position: absolute;
+    right: 10px;
+    top: -8px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-weight: bolder;
+    display: flex;
+    font-size: 18px;
+    border-top-right-radius: 10px;
+}
+.smallPokemonATK{
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-weight: bolder;
+    font-size: 11px;
+}
+.smallPokemonDEF{
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    font-weight: bolder;
+    font-size: 11px;
+}
+.userPokemon{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 100px;
+    color: #3B4CCA;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+}
+.enemy{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 10px;
+    color: #CC0000;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+}
