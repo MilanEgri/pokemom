@@ -58,9 +58,12 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
     alertBox.classList.add('alert');
     alertBox.textContent = 'Pokemon caught!';
     document.body.appendChild(alertBox);
-    setTimeout(() => {
+    const pokebutton = document.createElement('div');
+    pokebutton.classList.add('alert_button');
+    alertBox.appendChild(pokebutton);
+    /* setTimeout(() => {
       alertBox.remove();
-    }, 4000);
+    }, 4000); */
     setButtonMode('lose')
   };
 
