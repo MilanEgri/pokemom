@@ -6,4 +6,5 @@ body {
 button{
   border: none;
   box-shadow: none;
+  scroll-behavior: smooth;
 }

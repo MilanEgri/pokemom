@@ -42,11 +42,11 @@
 }
 
 .user {
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: flex;
     gap: 1vw;
     flex-wrap: wrap;
-    width: 50vw;
+    justify-content: center;
 }
 
 .pokemonCardContanierwater {
@@ -55,7 +55,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -67,7 +67,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -80,7 +80,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -92,7 +92,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -104,7 +104,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -116,7 +116,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -128,7 +128,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -140,7 +140,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -152,7 +152,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -164,7 +164,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -176,7 +176,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -188,7 +188,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -200,7 +200,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -212,7 +212,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -224,7 +224,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -236,7 +236,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -248,7 +248,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -260,7 +260,7 @@
     width: 350px;
     height: 400px;
     position: relative;
-    top: 5vh;
+    top: 1vh;
     left: 50vw;
     transform: translateX(-50%);
     padding: 10px;
@@ -749,4 +749,20 @@
     color: green;
     font-weight: bolder;
     font-size: 11px;
+}
+.userPokemon{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 100px;
+    color: #3B4CCA;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+}
+.enemy{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 10px;
+    color: #CC0000;
+    margin-left: 50vw;
+    transform: translateX(-50%);
 }
