@@ -9,7 +9,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   const audioRef = useRef(null);
 
   useEffect(() => {
-     playSong()
+    playSong()
 
     return () => {
       pauseSong()
@@ -47,20 +47,26 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   }
 
   function handleClick() {
-    
+
     setIsBattleStarted(true)
     setButtonMode('battle')
   };
 
   function handleCacth() {
     setUsersPokemons([...usersPokemons, pokemon])
-    alert('pokemon catched')
+    const alertBox = document.createElement('div');
+    alertBox.classList.add('alert');
+    alertBox.textContent = 'Pokemon caught!';
+    document.body.appendChild(alertBox);
+    setTimeout(() => {
+      alertBox.remove();
+    }, 4000);
     setButtonMode('lose')
   };
 
   function handleBack() {
     setPage('start')
-    
+
   }
 
   return (
@@ -84,7 +90,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
           </div>
           : buttonMode === 'win' ?
             <div>
-              <button onClick={() =>handleCacth()}>Catch</button>
+              <button onClick={() => handleCacth()}>Catch</button>
               <button onClick={() => handleBack()}>Back</button>
             </div>
             : null
