@@ -112,18 +112,18 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
         </div>
       </div>
       {buttonMode === 'loaded' ?
-        <div>
-          <button onClick={() => handleClick()}>Battle</button>
-          <button onClick={() => handleBack()}>Back</button>
+        <div className='buttonBox'>
+          <button onClick={() => handleClick()} className="battelButton">Battle</button>
+          <button onClick={() => handleBack()} className="battelButton">Back</button>
         </div>
         : buttonMode === 'lose' ?
-          <div>
-            <button onClick={() => handleBack()}>Back</button>
+          <div className='buttonBox'>
+            <button onClick={() => handleBack()} className="battelButton">Back</button>
           </div>
           : buttonMode === 'win' ?
-            <div>
-              <button onClick={() => handleCacth()}>Catch</button>
-              <button onClick={() => handleBack()}>Back</button>
+            <div className='buttonBox'>
+              <button onClick={() => handleCacth()} className="battelButton">Catch</button>
+              <button onClick={() => handleBack()} className="battelButton">Back</button>
             </div>
             : null
       }

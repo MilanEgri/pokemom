@@ -791,3 +791,20 @@
     margin-left: 50vw;
     transform: translateX(-50%);
 }
+.buttonBox{
+    margin-top: 10vh;
+    gap: 10vw;
+    display: flex;
+    justify-content: center;
+}
+.battelButton{
+    border: 3px solid black;
+    background-color: #808080;
+    border-radius: 12px;
+    font-size: 28px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.battelButton:hover{
+    scale: 1.05;
+}
