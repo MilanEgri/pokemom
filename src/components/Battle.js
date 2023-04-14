@@ -32,7 +32,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
         if (newEnemyHp <= 0) {
           setButtonMode('win')
         }
-      }, 100);
+      }, 500);
 
     }
   }, [isBattleStarted, userHP, enemyHP]);
