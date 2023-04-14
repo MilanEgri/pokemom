@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import sound from './PokémonThemeSong.wav'
+import Caught from './Caught'
 import { AiFillHeart } from 'react-icons/ai'
 
 const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons }) => {
@@ -8,6 +9,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   const [isBattleStarted, setIsBattleStarted] = useState(false);
   const [buttonMode, setButtonMode] = useState('loaded');
   const audioRef = useRef(null);
+  const [caughtShown ,setCaughtShown] =useState(false)
 
   useEffect(() => {
     playSong()
@@ -56,16 +58,10 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
 
   function handleCacth() {
     setUsersPokemons([...usersPokemons, pokemon])
-    const alertBox = document.createElement('div');
-    alertBox.classList.add('alert');
-    alertBox.textContent = 'Pokemon caught!';
-    document.body.appendChild(alertBox);
-    const pokebutton = document.createElement('div');
-    pokebutton.classList.add('alert_button');
-    alertBox.appendChild(pokebutton);
+    setCaughtShown(true)
     setButtonMode('battle')
     setTimeout(() => {
-      alertBox.remove();
+      setCaughtShown(false)
       setButtonMode('lose')
     }, 1500);
   };
@@ -96,7 +92,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
             </div>
           </div>
         </div>
-
+        { caughtShown && <Caught />}
 
         <div className={`pokemonCardContanier${userPokemon["types"][0]["type"]["name"]}`}>
           <div className='pokemonCard'>
