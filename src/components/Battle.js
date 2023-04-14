@@ -14,6 +14,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
 
     return () => {
       pauseSong()
+      
     }
   }, []);
   useEffect(() => {
@@ -62,10 +63,11 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
     const pokebutton = document.createElement('div');
     pokebutton.classList.add('alert_button');
     alertBox.appendChild(pokebutton);
+    setButtonMode('battle')
     setTimeout(() => {
       alertBox.remove();
+      setButtonMode('lose')
     }, 1500);
-    setButtonMode('lose')
   };
 
   function handleBack() {
