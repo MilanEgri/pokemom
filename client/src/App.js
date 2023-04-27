@@ -9,12 +9,6 @@ function App() {
   const [page, setPage] = useState('start')
   const [pokemon, setPokemon] = useState(null)
   const [userPokemon, setUserPokemon] = useState(null)
-  const usersPokemon = [
-    "https://pokeapi.co/api/v2/pokemon/bulbasaur",
-    "https://pokeapi.co/api/v2/pokemon/charizard",
-    "https://pokeapi.co/api/v2/pokemon/poliwhirl"
-]
-
 const [usersPokemons, setUsersPokemons]=useState([]);
 
   useEffect(() => {
@@ -27,7 +21,7 @@ const [usersPokemons, setUsersPokemons]=useState([]);
     <div className="App">
       {page ==='start'? 
       < Start  setPokemon={setPokemon} pokemon={pokemon} setPage={setPage}/> 
-      : page ==='pokemon'?<Pokemon  pokemon={pokemon} setUserPokemon={setUserPokemon} setPage={setPage} usersPokemons={usersPokemons}/>
+      : page ==='pokemon'?<Pokemon  pokemon={pokemon} setUserPokemon={setUserPokemon} setPage={setPage} usersPokemons={usersPokemons} setUsersPokemons={setUsersPokemons}/>
       : <Battle pokemon={pokemon} userPokemon={userPokemon} setPage={setPage} setUsersPokemons={setUsersPokemons} usersPokemons={usersPokemons}/> }
     </div>
   );

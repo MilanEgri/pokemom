@@ -3,15 +3,27 @@ body {
   margin: 0;
   background-color: darkgray;
 }
-button{
+
+button {
   border: none;
   box-shadow: none;
   scroll-behavior: smooth;
 }
-.battleBox{
+
+.battleBox {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   margin-left: 3vw;
   margin-right: 3vw;
+}
+
+.relase-and-pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.release-btn{
+  margin-right: 160px;
 }

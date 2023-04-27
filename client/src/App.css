@@ -808,3 +808,14 @@
 .battelButton:hover{
     scale: 1.05;
 }
+.sort{
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+.SortH2{
+    margin-left: 30px;
+}
+.sort-button{
+    cursor: pointer;
+}

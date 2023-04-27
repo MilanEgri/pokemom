@@ -72,7 +72,11 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
       })
     })
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => {
+        fetch("/api/pokemons")
+        .then(response => response.json())
+        .then(dataNew => setUsersPokemons(dataNew))
+      })
       .catch(error => console.error(error));
 
 
