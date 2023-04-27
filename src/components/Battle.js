@@ -8,8 +8,8 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   const [userHP, setUserHP] = useState(userPokemon.stats[0].base_stat);
   const [isBattleStarted, setIsBattleStarted] = useState(false);
   const [buttonMode, setButtonMode] = useState('loaded');
-  const audioRef = useRef(null);
   const [caughtShown ,setCaughtShown] =useState(false)
+  const pokeSong = new Audio(sound)
 
   useEffect(() => {
     playSong()
@@ -19,6 +19,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
       
     }
   }, []);
+
   useEffect(() => {
     if (isBattleStarted && enemyHP > 0 && userHP > 0) {
       setTimeout(() => {
@@ -40,14 +41,11 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   }, [isBattleStarted, userHP, enemyHP]);
 
   function playSong() {
-    audioRef.current = new Audio(sound);
-    audioRef.current.play();
+    pokeSong.play()
   }
 
   function pauseSong() {
-    if (audioRef.current) {
-      audioRef.current.pause();
-    }
+    pokeSong.pause()
   }
 
   function handleClick() {
