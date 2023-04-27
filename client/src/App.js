@@ -17,19 +17,10 @@ function App() {
 
 const [usersPokemons, setUsersPokemons]=useState([]);
 
-useEffect(() => {
-    const promises = usersPokemon.map(url => fetch(url));
-
-    Promise.all(promises)
-        .then(responses => Promise.all(responses.map(response => response.json())))
-        .then(pokemonData => setUsersPokemons(pokemonData))
-        .then(console.log(usersPokemons))
-  }, []);
-
   useEffect(() => {
     fetch("/api/pokemons")
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => setUsersPokemons(data))
   },[])
 
   return (

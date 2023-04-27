@@ -36,17 +36,17 @@ const Pokemon = ({ pokemon, setUserPokemon, setPage, usersPokemons }) => {
       <h1 className='userPokemon'>Chose a Pokemon to Battle</h1>
 
 
-      <div className='user' >{usersPokemons && usersPokemons.map((e, i) => <button onClick={() => handleOnclick(i)} key={i} className={`smallPokemonCardContanier${e["types"][0]["type"]["name"]}`} >
+      <div className='user' >{usersPokemons && usersPokemons.map((e, i) => <button onClick={() => handleOnclick(i)} key={e._id} className={`smallPokemonCardContanier${e.Type}`} >
         <div className='smallPokemonCard'>
           <div className={`smallPokemonBackground`}>
-            <img src={e.sprites.front_default} className='smallPokemonImage' />
+            <img src={e.ImageURL} className='smallPokemonImage' />
           </div>
           <div className={`smallPokemonContent`}>
-            <h1 className='smallPokemonName'>{e.name}</h1>
-            <p className='smallPokemonType'>{e["types"][0]["type"]["name"]}</p>
-            <p className='smallPokemonHP'>{e.stats[0].base_stat} <AiFillHeart /></p>
-            <p className='smallPokemonATK'>{e.stats[1].base_stat}</p>
-            <p className='smallPokemonDEF'>{e.stats[2].base_stat}</p>
+            <h1 className='smallPokemonName'>{e.Name}</h1>
+            <p className='smallPokemonType'>{e.Type}</p>
+            <p className='smallPokemonHP'>{e.HP} <AiFillHeart /></p>
+            <p className='smallPokemonATK'>{e.Attack}</p>
+            <p className='smallPokemonDEF'>{e.Defense}</p>
           </div>
         </div>
       </button>)}

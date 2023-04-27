@@ -5,7 +5,7 @@ import { AiFillHeart } from 'react-icons/ai'
 
 const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons }) => {
   const [enemyHP, setEnemyHP] = useState(pokemon.stats[0].base_stat);
-  const [userHP, setUserHP] = useState(userPokemon.stats[0].base_stat);
+  const [userHP, setUserHP] = useState(userPokemon.HP);
   const [isBattleStarted, setIsBattleStarted] = useState(false);
   const [buttonMode, setButtonMode] = useState('loaded');
   const [caughtShown, setCaughtShown] = useState(false)
@@ -23,8 +23,8 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   useEffect(() => {
     if (isBattleStarted && enemyHP > 0 && userHP > 0) {
       setTimeout(() => {
-        let myDamage = ((((2 / 5 + 2) * userPokemon.stats[1].base_stat * 60 / pokemon.stats[2].base_stat) / 50) + 2) * (Math.floor(Math.random() * 39) + 217) / 255
-        let enemyDamage = ((((2 / 5 + 2) * pokemon.stats[1].base_stat * 60 / userPokemon.stats[2].base_stat) / 50) + 2) * (Math.floor(Math.random() * 39) + 217) / 255
+        let myDamage = ((((2 / 5 + 2) * userPokemon.Attack * 60 / pokemon.stats[2].base_stat) / 50) + 2) * (Math.floor(Math.random() * 39) + 217) / 255
+        let enemyDamage = ((((2 / 5 + 2) * pokemon.stats[1].base_stat * 60 / userPokemon.Defense) / 50) + 2) * (Math.floor(Math.random() * 39) + 217) / 255
         let newEnemyHp = Math.floor(enemyHP - myDamage)
         let newUserHp = Math.floor(userHP - enemyDamage)
         setEnemyHP(newEnemyHp)
@@ -112,17 +112,17 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
         </div>
         {caughtShown && <Caught />}
 
-        <div className={`pokemonCardContanier${userPokemon["types"][0]["type"]["name"]}`}>
+        <div className={`pokemonCardContanier${userPokemon.Type}`}>
           <div className='pokemonCard'>
             <div className={`pokemonBackground`}>
-              <img src={userPokemon.sprites.front_default} className='pokemonImage' />
+              <img src={userPokemon.ImageURL} className='pokemonImage' />
             </div>
             <div className={`pokemonContent`}>
-              <h1 className='pokemonName'>{userPokemon.name}</h1>
-              <p className='pokemonType'>{userPokemon["types"][0]["type"]["name"]}</p>
+              <h1 className='pokemonName'>{userPokemon.Name}</h1>
+              <p className='pokemonType'>{userPokemon.Type}</p>
               <p className='pokemonHP'>{userHP} <AiFillHeart /></p>
-              <p className='pokemonATK'>{userPokemon.stats[1].base_stat}</p>
-              <p className='pokemonDEF'>{userPokemon.stats[2].base_stat}</p>
+              <p className='pokemonATK'>{userPokemon.Attack}</p>
+              <p className='pokemonDEF'>{userPokemon.Defense}</p>
             </div>
           </div>
         </div>
