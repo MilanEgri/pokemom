@@ -23,6 +23,11 @@ app.get('/api/pokemons', async (req, res) => {
 
 })
 
+app.delete('/api/delete/:id',async (req,res) =>{
+    const {id} = req.params
+    const deleted = await pokeom.findOneAndDelete({ _id: id })
+    res.status(200).json(deleted)
+})
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {
