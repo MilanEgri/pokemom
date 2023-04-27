@@ -7,15 +7,21 @@ const PORT = 5000;
 app.use(express.json())
 
 app.post('/api/catch', async (req, res) => {
-    const {Name,Type,HP,Attack,Defense,ImageURL} = req.body
-    try{
-        const cughtPokemon = await pokeom.create({Name,Type,HP,Attack,Defense,ImageURL})
+    const { Name, Type, HP, Attack, Defense, ImageURL } = req.body
+    try {
+        const cughtPokemon = await pokeom.create({ Name, Type, HP, Attack, Defense, ImageURL })
         res.status(200).json(cughtPokemon)
     }
-    catch(error){
-        res.status(400).json( {error: error.message} )
+    catch (error) {
+        res.status(400).json({ error: error.message })
     }
-  })
+})
+
+app.get('/api/pokemons', async (req, res) => {
+    const pokeoms = await pokeom.find({}).sort({ createdAt: -1 })
+    res.status(200).json(pokeoms)
+
+})
 
 
 mongoose.connect(process.env.MONGO_URL)

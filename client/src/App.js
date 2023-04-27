@@ -23,8 +23,15 @@ useEffect(() => {
     Promise.all(promises)
         .then(responses => Promise.all(responses.map(response => response.json())))
         .then(pokemonData => setUsersPokemons(pokemonData))
+        .then(console.log(usersPokemons))
   }, []);
-  
+
+  useEffect(() => {
+    fetch("/api/pokemons")
+    .then(response => response.json())
+    .then(data => console.log(data))
+  },[])
+
   return (
     <div className="App">
       {page ==='start'? 

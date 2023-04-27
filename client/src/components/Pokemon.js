@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import '../App.css'
 import { AiFillHeart } from 'react-icons/ai'
 
 const Pokemon = ({ pokemon, setUserPokemon, setPage, usersPokemons }) => {
 
+  useEffect(() => {
+    console.log(usersPokemons)
+  },[])
 
   function handleOnclick(i) {
     setUserPokemon(usersPokemons[i])
