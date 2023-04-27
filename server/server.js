@@ -7,7 +7,7 @@ app.use(express.json())
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {
-        app.listen(process.env.PORT, () => {
+        app.listen(PORT, () => {
             console.log('Connected to db & listening on port', PORT);
         })
     })
