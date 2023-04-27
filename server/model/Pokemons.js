@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
-const { Schema, model } = mongoose;
+const Schema = mongoose.Schema;
 
 const pokeSchema = new Schema({
     Name: String,
     Type: String,
     HP: Number,
     Attack: Number,
-    Defense: Number
-});
+    Defense: Number,
+    ImageURL:String
+},{timestamps: true});
 
-const Poke = model('Poke', pokeSchema);
-
-module.exports = Poke;
+module.exports = model('Poke', pokeSchema);
