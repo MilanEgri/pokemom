@@ -8,7 +8,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
   const [userHP, setUserHP] = useState(userPokemon.stats[0].base_stat);
   const [isBattleStarted, setIsBattleStarted] = useState(false);
   const [buttonMode, setButtonMode] = useState('loaded');
-  const [caughtShown ,setCaughtShown] =useState(false)
+  const [caughtShown, setCaughtShown] = useState(false)
   const pokeSong = new Audio(sound)
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
 
     return () => {
       pauseSong()
-      
+
     }
   }, []);
 
@@ -56,6 +56,26 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
 
   function handleCacth() {
     setUsersPokemons([...usersPokemons, pokemon])
+
+    fetch('/api/catch', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        Name: pokemon.name,
+        Type: pokemon["types"][0]["type"]["name"],
+        HP: pokemon.stats[0].base_stat,
+        Attack: pokemon.stats[1].base_stat,
+        Defense: pokemon.stats[2].base_stat,
+        ImageURL: pokemon.sprites.front_default
+      })
+    })
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+
+
     setCaughtShown(true)
     setButtonMode('battle')
     setTimeout(() => {
@@ -90,7 +110,7 @@ const Battle = ({ pokemon, userPokemon, setPage, setUsersPokemons, usersPokemons
             </div>
           </div>
         </div>
-        { caughtShown && <Caught />}
+        {caughtShown && <Caught />}
 
         <div className={`pokemonCardContanier${userPokemon["types"][0]["type"]["name"]}`}>
           <div className='pokemonCard'>

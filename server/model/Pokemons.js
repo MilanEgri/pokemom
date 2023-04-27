@@ -10,4 +10,4 @@ const pokeSchema = new Schema({
     ImageURL:String
 },{timestamps: true});
 
-module.exports = model('Poke', pokeSchema);
+module.exports = mongoose.model('Pokemons',pokeSchema)
